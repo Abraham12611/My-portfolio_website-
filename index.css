@@ -173,6 +173,23 @@ nav ul li a:hover::after{
   background: #ff004f;
   transform: translateY(-10px);
 }
+.slide-content{
+  display: none;
+}
+.slide-content.active {
+  display: block;
+}
+.slide-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-item.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-in-animation 0.5s ease-in-out;
+}
 /* -----portfolio----- */
 #portfilo{
   padding: 50px 0;

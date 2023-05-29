@@ -70,19 +70,43 @@
         <i class="fa-solid fa-code"></i>
         <h2>Frontend</h2>
         <p>My Frontend Tech Stack</p>
-        <a href="#">Learn More</a>
+        <a href="#" class="learn-more">Learn More</a>
+	 <div id="frontend-slide" class="slide-content">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <!-- <li>React</li> -->
+          </ul>
+        </div>
       </div>
        <div>
          <i class="fa-solid fa-crop"></i>
         <h2>Backend</h2>
         <p>My Backend Tech Stack</p>
-        <a href="#">Learn More</a>
+        <a href="#" class="learn-more">Learn More</a>
+	<div id="backend-slide" class="slide-content">
+          <ul>
+            <li>Python</li>
+            <li>Node.js</li>
+            <li>Flask</li>
+            <li>SQL</li>
+            <li>API</li>
+          </ul>
+        </div> 
       </div>
        <div>
          <i class="fa-solid fa-server"></i>
         <h2>Devops</h2>
         <p>My Devops Tech Stack</p>
-        <a href="#">Learn More</a>
+        <a href="#" class="learn-more">Learn More</a>
+	<div id="devops-slide" class="slide-content">
+          <ul>
+            <li>Linux</li>
+            <li>Bash Scripting</li>
+            <li>Docker</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -148,6 +172,22 @@
     <p>Copyright ©️ abraham.<i class="fa-solid fa-copyright fa-beat-fade"></i></p>
   </div>
 </div>
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link"); 
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
 
 <script>
 
