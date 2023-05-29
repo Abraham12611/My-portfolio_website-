@@ -174,19 +174,21 @@
 </div>
 
 <script>
-  var tablinks = document.getElementsByClassName("tab-links");
-  var tabcontents = document.getElementsByClassName("tab-contents");
-  
-  function opentab(tabname){
-    for(tablink of tablinks){
-      tablink.classList.remove("active-link");
+  var learnMoreLinks = document.getElementsByClassName("learn-more");
+for (var i = 0; i < learnMoreLinks.length; i++) {
+  learnMoreLinks[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    var slideContent = this.nextElementSibling;
+    slideContent.classList.toggle("active");
+    var slideItems = slideContent.getElementsByClassName("slide-item");
+    var delay = 100;
+    for (var j = 0; j < slideItems.length; j++) {
+      setTimeout(function(item) {
+        item.classList.add("slide-in");
+      }, delay * (j + 1), slideItems[j]);
     }
-    for(tabcontent of tabcontents){
-      tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link"); 
-    document.getElementById(tabname).classList.add("active-tab");
-  }
+  });
+}
 </script>
 
 <script>
