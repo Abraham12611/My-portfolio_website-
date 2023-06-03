@@ -4,12 +4,23 @@
   font-family: "poppins", Sans-Serif;
   box-sizing: border-box;
 }
+
+root {
+  --primary-color:#080808;
+  --secondary-color: #fff;
+}
+.light-theme {
+  --primary-color: #fff;
+  --secondary-color: #080808;
+}
+
+
 html{
   scroll-behavior: smooth;
 }
 body{
-  background: #080808;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 #header{
   width: 100%;
@@ -36,7 +47,7 @@ nav ul li {
   margin: 10px 20px;
 }
 nav ul li a{
-  color: #fff;
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -94,7 +105,7 @@ nav ul li a:hover::after{
 .sub-title{
   font-size: 60px;
   font-weight: 600;
-  color: #fff;
+  color: var(--secondary-color);
 }
 .tab-title{
   display: flex;
@@ -164,7 +175,7 @@ nav ul li a:hover::after{
 }
 .stack-list div a{
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-color);
   font-size: 12px;
   margin-top: 20px;
   display: inline-block;
@@ -238,7 +249,7 @@ nav ul li a:hover::after{
   color: #ff004f;
   font-size: 18px;
   line-height: 60px;
-  background: #fff;
+  background: var(--secondary-color);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -257,7 +268,7 @@ nav ul li a:hover::after{
   border: 1px  solid #0ef;
   padding: 14px 50px;
   border-radius: 6px;
-  color: #fff;
+  color: var(--secondary-color);
   text-decoration: none;
   transition: background 0.7s;
 }

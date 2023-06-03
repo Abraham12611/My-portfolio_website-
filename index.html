@@ -23,6 +23,7 @@
 	       <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
 	    </ul>
 	    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+	    <img src="moon.png" id="icon">
 	  </nav> 
 	   <div class="header-text">
 	     <p>A <span class="text"></span></p>
@@ -189,6 +190,14 @@ for (var i = 0; i < learnMoreLinks.length; i++) {
     }
   });
 }
+</script>
+
+<script>
+  var icon = document.getElementById("icon");
+
+  icon.onclick = function(){
+  document.body.classList.toggle("light-theme");
+  }
 </script>
 
 <script>
